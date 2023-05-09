@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public GameObject scanObject;
     public GameObject scanClickObject;
     private Collider2D scanCollider;
-    private IInteraction scanInteraction;
+    // private IInteraction scanInteraction;
 
     Rigidbody2D rigid;
 
@@ -40,8 +40,8 @@ public class PlayerController : MonoBehaviour
 
         if (scanClickObject)
             Interact();
-        if (Input.GetKeyDown(KeyCode.I))
-            UI_Root.TogglePopup(typeof(Define.UI_Popup), (int)Define.UI_Popup.Inventory);
+        // if (Input.GetKeyDown(KeyCode.I))
+        //     UI_Root.TogglePopup(typeof(Define.UI_Popup), (int)Define.UI_Popup.Inventory);
         if (Input.GetKeyDown(KeyCode.O))
             ToggleBulb();
 
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(rayOrigin, rayDirection * SCAN_DISTANCE, Color.red);
 
         scanObject = null;
-        scanInteraction = null;
+        // scanInteraction = null;
         scanCollider = null;
 
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, rayDirection, SCAN_DISTANCE, LayerMask.GetMask("Object"));
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log(scanObject.name);
 
             scanCollider = hit.collider;
-            scanInteraction = hit.collider.GetComponent<IInteraction>();
+            // scanInteraction = hit.collider.GetComponent<IInteraction>();
         }
     }
 
@@ -93,8 +93,8 @@ public class PlayerController : MonoBehaviour
 
     void Interact()
     {
-        if (scanCollider != null && scanInteraction != null)
-            scanInteraction.Interact(gameObject);
+        // if (scanCollider != null && scanInteraction != null)
+        //     scanInteraction.Interact(gameObject);
     }
     public void ToggleBulb()
     {
@@ -113,13 +113,13 @@ public class PlayerController : MonoBehaviour
     void GetItem()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1000f);
-        foreach (Collider2D col in colliders)
-            if (col.GetComponent<Item>() != null)
-            {
-                Debug.Log($"Item {col.name} Get!");
-                Inventory.Instance.Insert(col.name);
-                return;
-            }
+        // foreach (Collider2D col in colliders)
+        //     if (col.GetComponent<Item>() != null)
+        //     {
+        //         Debug.Log($"Item {col.name} Get!");
+        //         Inventory.Instance.Insert(col.name);
+        //         return;
+        //     }
     }
 
     void Move()
