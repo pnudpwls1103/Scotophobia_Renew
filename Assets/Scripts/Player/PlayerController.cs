@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         if (scanClickObject)
             Interact();
         if (Input.GetKeyDown(KeyCode.I))
-            UI_Root.TogglePopup(typeof(Define.UI_Popup), (int)Define.UI_Popup.Inventory);
+            UIRoot.TogglePopup(typeof(UIDefine.UIPopup), (int)UIDefine.UIPopup.Inventory);
         if (Input.GetKeyDown(KeyCode.O))
             ToggleBulb();
 
