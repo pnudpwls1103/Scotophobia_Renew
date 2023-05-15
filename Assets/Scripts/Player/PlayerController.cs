@@ -126,6 +126,18 @@ public class PlayerController : MonoBehaviour
     {
         float hAxis = Input.GetAxisRaw("Horizontal");
 
+        if (hAxis == 0)
+            animator.SetBool("isWalking", false);
+        else
+        {
+            animator.SetBool("isWalking", true);
+
+            if (hAxis < 0)
+                spriteRenderer.flipX = true;
+            else
+                spriteRenderer.flipX = false;
+        }
+
         rigid.position += Vector2.right * hAxis * speed;
     }
     private void OnCollisionEnter2D(Collision2D collision)
