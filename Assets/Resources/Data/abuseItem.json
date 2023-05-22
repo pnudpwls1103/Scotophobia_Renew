@@ -1,0 +1,32 @@
+{
+    "abuseItem" : [
+        {
+            "itemName" : "회초리",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "회초리",
+            "infoDescription" : ""
+        },
+        {
+            "itemName" : "등교 권고지",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "등교 권고지",
+            "infoDescription" : ""
+        },
+        {
+            "itemName" : "이웃집 소리",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "이웃집 소리",
+            "infoDescription" : ""
+        },
+        {
+            "itemName" : "거울 속 폭행 흔적",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "거울 속 폭행 흔적",
+            "infoDescription" : ""
+        }
+    ]
+}

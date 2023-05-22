@@ -1,0 +1,39 @@
+{
+    "homeworkItem" : [
+        {
+            "itemName" : "집안일_빨래",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "할 일 : 빨래",
+            "infoDescription" : ""
+        },
+        {
+            "itemName" : "집안일_책장",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "할 일 : 책장",
+            "infoDescription" : ""
+        },
+        {
+            "itemName" : "집안일_설거지",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "할 일 : 설거지",
+            "infoDescription" : ""
+        },
+        {
+            "itemName" : "집안일_밥짓기",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "할 일 : 밥짓기",
+            "infoDescription" : ""
+        },
+        {
+            "itemName" : "집안일_변기 뚫기",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "할 일 : 변기 뚫기",
+            "infoDescription" : ""
+        }
+    ]
+}
