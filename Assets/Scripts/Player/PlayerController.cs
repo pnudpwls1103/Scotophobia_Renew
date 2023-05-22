@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using System.IO;
+using static UnityEditor.Progress;
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     float direction;
     float speed;
     [SerializeField]
@@ -14,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public static event System.Action OnBulbOn = null;
     public static event System.Action OnBulbOff = null;
 
+    public int currentStage = 0;
+
     private const float SCAN_DISTANCE = 2f;
     public const float maxDistance = 9f;
     public GameObject scanObject;
@@ -22,6 +29,25 @@ public class PlayerController : MonoBehaviour
     private IInteraction scanInteraction;
 
     Rigidbody2D rigid;
+    SpriteRenderer spriteRenderer;
+    Animator animator;
+    private void Awake()
+    {
+        #region
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(instance.gameObject);
+        }
+        DontDestroyOnLoad(this.gameObject);
+        #endregion
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+    }
 
     void Start()
     {
@@ -40,11 +66,33 @@ public class PlayerController : MonoBehaviour
 
         if (scanClickObject)
             Interact();
-        if (Input.GetKeyDown(KeyCode.I))
-            UI_Root.TogglePopup(typeof(Define.UI_Popup), (int)Define.UI_Popup.Inventory);
         if (Input.GetKeyDown(KeyCode.O))
             ToggleBulb();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            print(transform.position);
+            SceneManager.LoadScene("Select", LoadSceneMode.Additive);
+        }
 
+    }
+
+    void Move()
+    {
+        float hAxis = Input.GetAxisRaw("Horizontal");
+
+        if (hAxis == 0)
+            animator.SetBool("isWalking", false);
+        else
+        {
+            animator.SetBool("isWalking", true);
+
+            if (hAxis < 0)
+                spriteRenderer.flipX = true;
+            else
+                spriteRenderer.flipX = false;
+        }
+
+        rigid.position += Vector2.right * hAxis * speed;
     }
 
     private void ScanObject()
@@ -96,6 +144,13 @@ public class PlayerController : MonoBehaviour
         if (scanCollider != null && scanInteraction != null)
             scanInteraction.Interact(gameObject);
     }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Stage1_Ground"))
+            currentStage = 0;
+        else if (collision.gameObject.CompareTag("Stage2_Ground"))
+            currentStage = 1;
+    }
     public void ToggleBulb()
     {
         if (bulb)
@@ -110,7 +165,7 @@ public class PlayerController : MonoBehaviour
 
         bulb = !bulb;
     }
-    void GetItem()
+/*    void GetItem()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1000f);
         foreach (Collider2D col in colliders)
@@ -120,31 +175,13 @@ public class PlayerController : MonoBehaviour
                 Inventory.Instance.Insert(col.name);
                 return;
             }
-    }
+    }*/
 
-    void Move()
-    {
-        float hAxis = Input.GetAxisRaw("Horizontal");
-
-        if (hAxis == 0)
-            animator.SetBool("isWalking", false);
-        else
+    /*    private void OnCollisionEnter2D(Collision2D collision)
         {
-            animator.SetBool("isWalking", true);
-
-            if (hAxis < 0)
-                spriteRenderer.flipX = true;
-            else
-                spriteRenderer.flipX = false;
-        }
-
-        rigid.position += Vector2.right * hAxis * speed;
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Monster"))
-            Die();
-    }
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Monster"))
+                Die();
+        }*/
 
     public void Die()
     {
