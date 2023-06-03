@@ -51,9 +51,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 00b940be2a0b43c4cabdbc5f93d1a89d, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 00b940be2a0b43c4cabdbc5f93d1a89d, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 00b940be2a0b43c4cabdbc5f93d1a89d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 00b940be2a0b43c4cabdbc5f93d1a89d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7585347736140575480, guid: 00b940be2a0b43c4cabdbc5f93d1a89d, type: 3}
       propertyPath: m_Name
-      value: Abuse
+      value: Rod_Abuse Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690007297802361153, guid: 00b940be2a0b43c4cabdbc5f93d1a89d, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690007297802361153, guid: 00b940be2a0b43c4cabdbc5f93d1a89d, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690007297802361153, guid: 00b940be2a0b43c4cabdbc5f93d1a89d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 33139760b5d916b438e338627dd3535d, type: 3}
+    - target: {fileID: 8690007297802361153, guid: 00b940be2a0b43c4cabdbc5f93d1a89d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b940be2a0b43c4cabdbc5f93d1a89d, type: 3}
