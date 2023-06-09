@@ -1,0 +1,32 @@
+{
+    "pictureItem" : [
+        {
+            "itemName" : "가족사진1",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "가족사진1",
+            "infoDescription" : ""
+        },
+        {
+            "itemName" : "가족사진2",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "가족사진2",
+            "infoDescription" : ""
+        },
+        {
+            "itemName" : "가족사진3",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "가족사진3",
+            "infoDescription" : ""
+        },
+        {
+            "itemName" : "가족사진4",
+            "check" : false,
+            "imagePath" : "",
+            "infoName" : "가족사진4",
+            "infoDescription" : ""
+        }
+    ]
+}
