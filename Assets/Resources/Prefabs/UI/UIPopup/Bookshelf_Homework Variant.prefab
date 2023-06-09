@@ -51,9 +51,85 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -0.95105654
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: 0.30901697
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: -0.5877852
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: -0.80901706
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: 0.58778536
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -0.80901694
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
+      value: 0.9510565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
+      value: 0.30901712
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522208828769539487, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7585347736140575480, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
       propertyPath: m_Name
-      value: Bookshelf_Homework
+      value: Bookshelf_Homework Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61068b26010f3ef4c9fd2f1aa3f65ec9, type: 3}
